@@ -1,8 +1,15 @@
 import json
 import logging
+import os
+import sys
 
-from ..redis_model import RedisQueue, RedisDict
-from ..utils import data_gen
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+
+sys.path.insert(0, parent_dir)
+
+from redis_model import RedisQueue, RedisDict
+from utils import data_gen
 
 logging.basicConfig(level=logging.INFO,
                     format="Logan233: %(asctime)s %(levelname)s [%(name)s] %(message)s",
