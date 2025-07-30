@@ -21,7 +21,7 @@ def data_clean():
                 q = q[:-1]
             content2question_clean.append((content, q))
     print(f"End generating data and Clean, num: {len(content2question_clean)}")
-    with open('../../data/1_doc/hnc_data_1118_stage_1_clean.json', 'w', encoding='utf-8') as f:
+    with open('../../data/1_doc/hnc_data_250730_stage_1_clean.json', 'w', encoding='utf-8') as f:
         json.dump(content2question_clean, f, ensure_ascii=False, indent=4)
 
 

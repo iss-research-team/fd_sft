@@ -62,7 +62,7 @@ def main():
     dict_outputs.close()
     logging.info(f"End generating data, num: {len(question_list)}")
     # save 2 json
-    with open('../../data/1_doc/hnc_data_1118_stage_1.json', 'w', encoding='utf-8') as f:
+    with open('../../data/1_doc/hnc_data_250730_stage_1.json', 'w', encoding='utf-8') as f:
         content2question = list(zip(inputs_list, question_list))
         json.dump(content2question, f, ensure_ascii=False, indent=4)
 

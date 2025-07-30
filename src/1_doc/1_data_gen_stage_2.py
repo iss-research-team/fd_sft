@@ -23,7 +23,7 @@ def main():
                     '注意：回答需要注意与【相关内容】的关联性，尽量简洁易懂；回答中不要重复问题中的内容；回答内容中不要出现英文。'}
     ]
     # load content2question
-    with open('../../data/1_doc/hnc_data_1118_stage_1_clean.json', 'r', encoding='utf-8') as f:
+    with open('../../data/1_doc/hnc_data_250730_stage_1_clean.json', 'r', encoding='utf-8') as f:
         content2question_list = json.load(f)
     inputs_list = ["【相关内容】 " + content + "\n" + "【问题】 " + question + "\n" + "【回答】 "
                    for content, question in content2question_list]
@@ -40,7 +40,7 @@ def main():
     dict_outputs.close()
     logging.info(f"End generating data, num: {len(answer_list)}")
     # save 2 json
-    with open('../../data/1_doc/hnc_data_1118_stage_2.json', 'w', encoding='utf-8') as f:
+    with open('../../data/1_doc/hnc_data_250730_stage_2.json', 'w', encoding='utf-8') as f:
         question_list = [question for _, question in content2question_list]
         question2answer_list = list(zip(question_list, answer_list))
         json.dump(question2answer_list, f, ensure_ascii=False, indent=4)

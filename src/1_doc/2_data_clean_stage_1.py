@@ -24,7 +24,7 @@ def main():
                     '注意：请在保证内容完整正确的情况下，尽量简洁；整理后的内容中不要出现英文。'},
     ]
     # load content2question
-    with open('../../data/1_doc/hnc_data_1118_stage_2.json', 'r', encoding='utf-8') as f:
+    with open('../../data/1_doc/hnc_data_250730_stage_2.json', 'r', encoding='utf-8') as f:
         question2answer_list = json.load(f)
     inputs_list = ["【问题】 " + question + "\n" + "【回答】 " + answer
                    for question, answer in question2answer_list]
@@ -41,7 +41,7 @@ def main():
     dict_outputs.close()
     logging.info(f"End generating data, num: {len(question2answer_list_clean)}")
     # save 2 json
-    with open('../../data/1_doc/hnc_data_1118_stage_3.json', 'w', encoding='utf-8') as f:
+    with open('../../data/1_doc/hnc_data_250730_stage_3.json', 'w', encoding='utf-8') as f:
         # question2answer_list_clean = [question2answer.split('【回答】') for question2answer in question2answer_list_clean]
         # question2answer_list_clean = [[question2answer[0].replace('【问题】', '').strip(), question2answer[1].strip()]
         #                               for question2answer in question2answer_list_clean]

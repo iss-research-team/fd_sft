@@ -184,7 +184,7 @@ if __name__ == '__main__':
     #            output_path="../../data/1_doc/hnc_data_1118_stage_4.json")
 
     # 数据筛查慢慢搞先导出一个用
-    question2answer_list_clean = load_inputs("../../data/1_doc/hnc_data_1118_stage_3.json")
+    question2answer_list_clean = load_inputs("../../data/1_doc/hnc_data_250730_stage_3.json")
     question2answer_list_clean = [{
         "instruction": question,
         "input": "",
@@ -192,7 +192,7 @@ if __name__ == '__main__':
     } for question, answer in question2answer_list_clean]
 
     print(f"End generating data and Clean, num: {len(question2answer_list_clean)}")
-    with open("../../data/1_doc/hnc_data_1118_stage_3_output.json", 'w', encoding='utf-8') as f:
+    with open("../../data/1_doc/hnc_data_250730_output.json", 'w', encoding='utf-8') as f:
         json.dump(question2answer_list_clean, f, ensure_ascii=False, indent=4)
 
     data_analysis(question2answer_list_clean)
